@@ -35,10 +35,5 @@ public class WithdrawalServiceImpl implements WithdrawalService {
         return withdrawalRepository.save(withdrawal);
     }
 
-    @Override
-    public Mono<Withdrawal> updateWithdrawal(Withdrawal withdrawal) {
-        log.info("Actualizando Withdrawal");
-        return withdrawalRepository.save(withdrawal);
-    }
 
 }
