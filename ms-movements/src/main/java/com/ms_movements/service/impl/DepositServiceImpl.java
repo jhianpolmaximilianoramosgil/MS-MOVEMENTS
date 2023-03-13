@@ -40,21 +40,6 @@ public class DepositServiceImpl implements DepositService {
         return depositRepository.save(deposit);
     }
 
-    @Override
-    public Mono<Deposit> updateDeposit(Deposit deposit) {
-        log.info("Actualizando Deposit");
-        return depositRepository.save(deposit);
-    }
 
-    private final WebClient.Builder webClientBuilder = WebClient.builder();
-
-    @Override
-    public Mono<Customers> findCustomersById(Long idCustomers){
-        return webClientBuilder.build()
-                .get()
-                .uri("http://localhost:8084/customers/id/{idCustomers}", idCustomers)
-                .retrieve()
-                .bodyToMono(Customers.class);
-    }
 
 }
