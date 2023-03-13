@@ -14,18 +14,19 @@ public class WithdrawalController {
     private WithdrawalService withdrawalService;
 
     @GetMapping
-    public Flux<Withdrawal> findCustomers() {
+    public Flux<Withdrawal> findWithdrawal() {
         return withdrawalService.findWithdrawal();
     }
 
     @GetMapping("/id/{id}")
-    public Mono<Withdrawal> findCustomersById(@PathVariable Long id) {
+    public Mono<Withdrawal> findWithdrawalById(@PathVariable Long id) {
         return withdrawalService.findWithdrawalById(id);
     }
 
     @PostMapping
-    public Mono<Withdrawal> createCustomers(@RequestBody Withdrawal withdrawal) {
+    public Mono<Withdrawal> createWithdrawal(@RequestBody Withdrawal withdrawal) {
         return withdrawalService.createWithdrawal(withdrawal);
     }
+
 
 }

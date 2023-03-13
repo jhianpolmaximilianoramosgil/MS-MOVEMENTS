@@ -13,6 +13,6 @@ public interface WithdrawalService {
 
     Mono<Withdrawal> createWithdrawal(Withdrawal withdrawal);
 
-    Mono<Withdrawal> updateWithdrawal(Withdrawal withdrawal);
+
 
 }
