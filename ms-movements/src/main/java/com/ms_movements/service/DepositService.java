@@ -14,8 +14,4 @@ public interface DepositService {
 
     Mono<Deposit> createDeposit(Deposit deposit);
 
-    Mono<Deposit> updateDeposit(Deposit deposit);
-
-    Mono<Customers> findCustomersById(Long idCustomers);
-
 }
