@@ -29,14 +29,5 @@ public class DepositController {
         return depositService.createDeposit(deposit);
     }
 
-    @PutMapping
-    public Mono<Deposit> updateDeposit(@RequestBody Deposit deposit) {
-        return depositService.updateDeposit(deposit);
-    }
-
-    @GetMapping("/customersId/{idCustomers}")
-    public Mono<Customers> findCustomersById(@PathVariable Long idCustomers) {
-        return depositService.findCustomersById(idCustomers);
-    }
 
 }
