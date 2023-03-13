@@ -28,9 +28,4 @@ public class WithdrawalController {
         return withdrawalService.createWithdrawal(withdrawal);
     }
 
-    @PutMapping
-    public Mono<Withdrawal> updateCustomers(@RequestBody Withdrawal withdrawal) {
-        return withdrawalService.updateWithdrawal(withdrawal);
-    }
-
 }
